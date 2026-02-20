@@ -90,7 +90,7 @@ export default definePlugin({
     }, {
         name: "l2cu",
         id: 1208352443512004648n
-}],,
+}],
     settings,
 
     start() {
