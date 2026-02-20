@@ -90,7 +90,7 @@ export default definePlugin({
     }, {
         name: "l2cu",
         id: 1208352443512004648n
-}],
+}],,
     settings,
 
     start() {
@@ -133,7 +133,7 @@ export default definePlugin({
             predicate: () => settings.store.disableFade
         },
         { // Load menu TOC eagerly
-            find: "#{intl::USER_SETTINGS_WITH_BUILD_OVERRIDE}",
+            find: "handleOpenSettingsContextMenu=",
             replacement: {
                 match: /(?=handleOpenSettingsContextMenu=.{0,100}?null!=\i&&.{0,100}?(await [^};]*?\)\)))/,
                 replace: "_vencordBetterSettingsEagerLoad=(async ()=>$1)();"
