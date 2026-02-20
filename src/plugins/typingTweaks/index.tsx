@@ -93,7 +93,7 @@ const TypingUser = ErrorBoundary.wrap(function TypingUser({ user, guildId }: Typ
 }, { noop: true });
 
 export default definePlugin({
-    name: "تشوف افتارات الي يكتبون",
+   name: "تشوف افتارات الي يكتبون",
     description: "Show avatars and role colours in the typing indicator",
     authors: [{
         name: "rz30",
@@ -108,7 +108,7 @@ export default definePlugin({
 
     patches: [
         {
-            find: "#{intl::THREE_USERS_TYPING}",
+            find: "#{intl::SEVERAL_USERS_TYPING_STRONG}",
             group: true,
             replacement: [
                 {
