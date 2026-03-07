@@ -95,10 +95,8 @@ const TypingUser = ErrorBoundary.wrap(function TypingUser({ user, guildId }: Typ
 export default definePlugin({
    name: "تشوف افتارات الي يكتبون",
     description: "Show avatars and role colours in the typing indicator",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors: [Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
