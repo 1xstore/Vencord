@@ -452,7 +452,11 @@ const UserContext: NavContextMenuPatchCallback = (children, { user }: UserContex
 export default definePlugin({
     name: "rz FollowUser",
     description: "Adds follow and reverse follow options in the user context menu to always be in the same VC as them or pull them to your VC. Shortcuts: Ctrl+Shift+R (clear list), Ctrl+Shift+T (trigger pull) | Enhanced by Purify",
-    authors: [{ name: "rz30", id: 786315593963536415n }],
+    authors: [Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
+}],
 
     settings,
 
