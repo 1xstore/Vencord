@@ -28,10 +28,8 @@ import { initMicrophoneStore } from "@plugins/betterMicrophone.desktop/stores";
 export default definePlugin({
     name: "تعديل المايك",
     description: "This plugin allows you to further customize your microphone.",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors: [Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
