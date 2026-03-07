@@ -39,7 +39,11 @@ export interface HighlighterProps {
 export default definePlugin({
     name: "KaTeX",
     description: "TeX typesetting in discord",
-    authors: [Devs.skyevg],
+    authors:[Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
+}],
     reporterTestable: ReporterTestable.Patches,
 
     patches: [
