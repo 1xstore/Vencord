@@ -24,10 +24,8 @@ import { replacedUserPanelComponent } from "@plugins/philsPluginLibrary/patches"
 export default definePlugin({
     name: "PhilsPluginLibrary",
     description: "A library for phil's plugins",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors: [Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
