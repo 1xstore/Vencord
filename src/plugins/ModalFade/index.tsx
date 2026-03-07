@@ -46,13 +46,7 @@ const ANIMS = {
 export default definePlugin({
     name: "ModalFade",
     description: "Makes modals fade the backdrop, rather than dimming",
-    authors:  [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors:  [Devs.r3r1, Devs.rz30,],
 
     patches: [
         {
