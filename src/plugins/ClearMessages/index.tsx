@@ -199,10 +199,7 @@ async function deleteMessagesInChannel(channelId: string, authorId: string) {
 export default definePlugin({
     name: "ClearMessages",
     description: "Delete your messages, if u want to delete ur message type to dm this command /delete ",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }],
+    authors: [Devs.r3r1, Devs.rz30,],
     settings,
 
     commands: [
