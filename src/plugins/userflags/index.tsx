@@ -78,10 +78,8 @@ function Flag({ id }: { id: string; }) {
 export default definePlugin({
     name: "UserFlags",
     description: `Add "flags" to users that will always show under their messages`,
-    authors:  [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors:  [Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
@@ -171,4 +169,5 @@ export default definePlugin({
         }
     ]
 });
+
 
