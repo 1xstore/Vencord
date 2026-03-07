@@ -533,10 +533,11 @@ function removeContainer() {
 export default definePlugin({
     name: "HomeTyping",
     description: "Changes the home button to a typing indicator if someone in your dms is typing, and shows typing notifications",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }],
+    authors: [Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
+}],
     settings,
 
     TypingIcon() {
