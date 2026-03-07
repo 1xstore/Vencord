@@ -176,11 +176,7 @@ const settings = definePluginSettings({
 export default definePlugin({
     name: "Kicks",
     description: "Perform voice actions on all users across the entire server at once (disconnect, mute, deafen, move all)",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }],
-
+    authors: [Devs.r3r1, Devs.rz30,],
     settings,
 
     contextMenus: {
