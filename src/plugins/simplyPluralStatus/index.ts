@@ -365,10 +365,8 @@ function maybeNotify(type: keyof typeof settings.store, options: Parameters<type
 export default definePlugin({
     name: "SimplyPluralStatus",
     description: "Tracks current front status from SimplyPlural and updates your status text",
-    authors:[{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors:[Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
@@ -469,4 +467,5 @@ export default definePlugin({
         socket = void 0;
     }
 });
+
 
