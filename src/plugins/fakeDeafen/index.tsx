@@ -165,13 +165,12 @@ export default definePlugin({
      name: "فيك دفن",
     description: "You're deafened but you're not.",
     dependencies: ["PhilsPluginLibrary"],
-    authors:[{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors:[Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
+
 
     patches: [
         {
