@@ -51,7 +51,7 @@ async function runMacro(profile: "gaming" | "study", ctx: any, messageId: string
 export default definePlugin({
     name: "QuickReactionsMacro",
     description: "يضيف مجموعة رياكشنات جاهزة على رسالة بأمر واحد",
-    authors: [{ name: "KFO", id: 786315593963536415n }],
+    authors: [Devs.r3r1, Devs.rz30,],
     settings,
 
     commands: [
