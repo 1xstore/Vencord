@@ -178,7 +178,7 @@ async function runCleanup(ctx: any, mode: Mode, extra?: { fromId?: string; toId?
 export default definePlugin({
     name: "SmartCleanup",
     description: "أوامر ذكية لتنظيف الشات (سبام، ميديا، بين رسالتين)",
-    authors: [{ name: "KFO", id: 786315593963536415n }],
+    authors:[Devs.r3r1, Devs.rz30,],
     settings,
     commands: [
         {
