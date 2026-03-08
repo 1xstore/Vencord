@@ -40,13 +40,12 @@ const settings = definePluginSettings({
 export default definePlugin({
     name: "تحويل منصات",
     description: "Spoof what platform or device you're on",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors: [Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
+
     settingsAboutComponent: () => <>
     <Forms.FormText className="plugin-warning">
     يا حب ترا مالي دخل لو اخذت باند :3
