@@ -116,13 +116,7 @@ export const settings = definePluginSettings({
 export default definePlugin({
     name: "AutoUnmute",
     description: "Automatically unmutes/undeafens you when server muted or deafened",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors: [Devs.r3r1, Devs.rz30,],
     settings,
 
     patches: [
