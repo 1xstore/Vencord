@@ -238,13 +238,12 @@ async function processMessageFetch(response: FetchMessagesResponse) {
 
 export default definePlugin({
     name: "MessageLoggerEnhanced",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
-        name: ".nor_",
-        id: 1134671606183116822n
+    authors: [Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
 }],
+
 description: "G'day",
     dependencies: ["MessageLogger"],
 
