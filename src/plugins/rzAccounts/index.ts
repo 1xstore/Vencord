@@ -32,11 +32,7 @@ const settings = definePluginSettings({
 export default definePlugin({
     name: "اضافات",
     description: "يخليك تضيف لين تطفش بس خذها مني الافضل انك تحط 0",
-    authors: [Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors: [Devs.r3r1, Devs.rz30,],
 
     settings,
     patches: [
