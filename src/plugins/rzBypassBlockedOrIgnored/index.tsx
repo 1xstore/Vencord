@@ -15,11 +15,7 @@ const { getBlockedUsersForVoiceChannel, getIgnoredUsersForVoiceChannel } = findB
 export default definePlugin({
     name: "rzBypassBlockedOrIgnored",
     description: "Bypass the blocked or ignored user modal if is present in voice channels.",
-    authors: [Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors:[Devs.r3r1, Devs.rz30,],
 
     settings,
     patches: [
