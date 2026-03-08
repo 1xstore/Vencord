@@ -158,7 +158,7 @@ async function handleVoiceJoin(
 export default definePlugin({
     name: "VoiceMultiNotify",
     description: "يرسل إشعار (DM أو في قناة) لما أشخاص معيّنين يدخلون رومات صوت معيّنة.",
-    authors: [{ name: "rz30", id: 786315593963536415n }],
+    authors: [Devs.r3r1, Devs.rz30,],
 
     settings: {
         targetUserIds: {
