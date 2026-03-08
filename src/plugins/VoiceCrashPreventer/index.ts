@@ -24,13 +24,7 @@ const settings = definePluginSettings({
 export default definePlugin({
     name: "VoiceCrashPreventer",
     description: "Prevents crashes for users with old voice modules when phone screen/camera is opened",
-    authors:  [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
-        name: ".nor_",
-        id:1134671606183116822n
-}],
+    authors:  [Devs.r3r1, Devs.rz30,],
     settings,
 
     start() {
