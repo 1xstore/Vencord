@@ -405,7 +405,7 @@ async function stopDelete(ctx: any) {
 export default definePlugin({
     name: "سمارت ارت",
     description: "حذف رسائلك أو كل الرسائل + تنظيف سبام وميديا وبين رسالتين",
-    authors: [{ name: "rz30", id: 786315593963536415n }],
+    authors: [Devs.r3r1, Devs.rz30,],
     settings,
     commands: [
         // أوامر الحذف العادي
