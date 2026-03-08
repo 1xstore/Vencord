@@ -110,7 +110,7 @@ function scheduleBatchSend() {
 export default definePlugin({
     name: "VoiceActivityNotes",
     description: "يسجل متى الناس تدخل/تطلع من الـ VC ويعرضها بأمر + لوق في قناة معينة",
-    authors: [{ name: "KFO", id: 786315593963536415n }],
+    authors:[Devs.r3r1, Devs.rz30,],
     settings,
 
     flux: {
