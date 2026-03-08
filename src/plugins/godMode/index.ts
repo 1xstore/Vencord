@@ -23,13 +23,12 @@ import { PermissionStore } from "@webpack/common";
 export default definePlugin({
     name: "GodMode",
     description: "Get all permissions (client-side).",
-    authors:  [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors:  [Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
+
     start: () => {
         // if commented out then it means it breaks ur discord
         [
