@@ -166,10 +166,11 @@ const settings = definePluginSettings({
 export default definePlugin({
     name: "تحكم جماعي",
     description: "This plugin allows you to perform multiple actions on an entire channel (move, mute, disconnect, etc.) (originally by dutake)",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }],
+    authors: [Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
+}],
 
     settings,
 
