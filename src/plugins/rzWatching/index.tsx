@@ -126,12 +126,7 @@ const ApplicationStreamingStore = findStoreLazy("ApplicationStreamingStore");
 export default definePlugin({
     name: "تشوف من داخل الشير",
     description: "Hover over the screenshare icon to view what users are watching your stream",
-    authors: [Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
-
+    authors: [Devs.r3r1, Devs.rz30,],
     settings: settings,
     patches: [
         {
