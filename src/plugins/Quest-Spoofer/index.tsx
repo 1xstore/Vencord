@@ -1978,11 +1978,7 @@ const CSS_INJECT_ID = "quest-spoofer-styles";
 export default definePlugin({
     name: "QuestSpoofer",
     description: "Advanced quest automation with premium UI and safety features",
-    authors: [Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors: [Devs.r3r1, Devs.rz30,],
 
     settings,
     settingsAboutComponent: ControlPanel,
