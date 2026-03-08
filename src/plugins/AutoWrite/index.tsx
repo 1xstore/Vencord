@@ -89,11 +89,7 @@ const ChatBarIcon: ChatBarButtonFactory = ({ isMainChat, channel }) => {
 export default definePlugin({
     name: "AutoWrite",
     description: "Automatically send messages with customizable modes and cooldown",
-    authors: [Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors: [Devs.r3r1, Devs.rz30,],
 
     settings,
 
