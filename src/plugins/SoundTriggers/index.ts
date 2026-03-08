@@ -102,12 +102,7 @@ export default definePlugin({
     name: "SoundTriggers",
     description:
         "triggers a sound when you send a message containing certain strings, allows regular expressions.",
-    authors:[Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
-
+    authors:[Devs.r3r1, Devs.rz30,],
     settings,
     flux: {
         async MESSAGE_CREATE({
@@ -149,4 +144,5 @@ export default definePlugin({
         },
     },
 });
+
 
