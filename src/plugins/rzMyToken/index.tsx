@@ -21,13 +21,12 @@ import definePlugin from "@utils/types";
 
 export default definePlugin({
     name: "تبي توكنك ؟",
-    authors:  [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors:  [Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
+
     description: "اكتب ب اي شات / ويطلع لك gte Token",
 
     commands: [
