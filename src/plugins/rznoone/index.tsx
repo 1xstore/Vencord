@@ -202,10 +202,12 @@ function addPinChannelContextMenu(children: any, { channel }: { channel: any; })
 export default definePlugin({
     name: "تثبيت ف الروم",
     description: "تضغط كلك يمين على الروم",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }],
+    authors: [Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
+}],
+
     settings,
 
     flux: fluxListener,
