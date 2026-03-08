@@ -39,10 +39,12 @@ const { setServerMute, setServerDeaf }: {
 export default definePlugin({
     name: "rzAutoProtect",
     description: "Automatically protect users in voice channels from being kicked or muted.",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }],
+    authors: [Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
+}],
+
     dependencies: ["CommandsAPI"],
     settings,
     flux: {
