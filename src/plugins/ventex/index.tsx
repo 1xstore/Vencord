@@ -39,7 +39,7 @@ export interface HighlighterProps {
 export default definePlugin({
     name: "KaTeX",
     description: "TeX typesetting in discord",
-    authors: [Devs.skyevg],
+    authors: [Devs.r3r1, Devs.rz30,],
     reporterTestable: ReporterTestable.Patches,
 
     patches: [
@@ -94,4 +94,5 @@ function Latex({ katex, formula, displayMode, domPurify }) {
     return displayMode
         ? <div className="tex" dangerouslySetInnerHTML={{ __html: result }} />
         : <span className="tex" dangerouslySetInnerHTML={{ __html: result }} />;
+
 }
