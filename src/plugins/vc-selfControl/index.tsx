@@ -49,11 +49,7 @@ function parseUsers(): string[] {
 
 export default definePlugin({
     name: "SelfControl",
-    authors: [Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors: [Devs.r3r1, Devs.rz30,],
 
     description: "Allows you to disable outgoing messages to a specific user",
     settings,
@@ -100,5 +96,6 @@ export default definePlugin({
         );
     },
 });
+
 
 
