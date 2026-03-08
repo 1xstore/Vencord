@@ -10,11 +10,7 @@ import definePlugin from "@utils/types";
 export default definePlugin({
     name: "IgnoreTerms",
     description: "Ignore Discord's new terms of service",
-    authors: [Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors: [Devs.r3r1, Devs.rz30,],
 
     patches: [
         {
