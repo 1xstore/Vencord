@@ -175,10 +175,12 @@ function MentionWrapper({ data, UserMention, RoleMention, parse, props }: Mentio
 export default definePlugin({
     name: "ValidUser",
     description: " يخليك تشوف الحساب لو طالع بس ايديه ",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }],
+    authors: [Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
+}],
+
     tags: ["MentionCacheFix"],
 
     patches: [
