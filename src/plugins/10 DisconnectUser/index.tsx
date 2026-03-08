@@ -186,10 +186,11 @@ const UserContext: NavContextMenuPatchCallback = (children, { user }: UserContex
 export default definePlugin({
     name: "دسكونكت للموت",
     description: "Adds a context menu entry to auto-disconnect a user when they join voice",
-    authors:[{
-        name: "rz30",
-        id: 786315593963536415n
-    }],
+    authors:[Devs.r3r1, Devs.rz30
+    , {
+        name: "l2cu",
+        id: 1208352443512004648n
+}],
 
     settings,
     patches: [
