@@ -48,9 +48,12 @@ const settings = definePluginSettings({
 });
 
 export default definePlugin({
-    name: "UserVoiceShow",
-    description: "Shows an indicator when a user is in a Voice Channel",
-    authors: [Devs.Nuckyz, Devs.LordElias],
+    name: "تشوفه ف اي روم ؟",
+    description: "تشوف الناس ب اي روم داخلين",
+    authors: [{
+        name: "rz30",
+        id: 786315593963536415n
+    }],
     dependencies: ["MemberListDecoratorsAPI", "MessageDecorationsAPI"],
     settings,
 
@@ -59,8 +62,8 @@ export default definePlugin({
         {
             find: "#{intl::USER_PROFILE_PRONOUNS}",
             replacement: {
-                match: /(?<=children:\[\i," ",\i)(?=\])/,
-                replace: ",$self.VoiceChannelIndicator({userId:arguments[0]?.user?.id,isProfile:true})"
+                match: /(\i).isVerifiedBot\(\)}\),/,
+                replace: "$&$self.VoiceChannelIndicator({userId:$1.id,isProfile:true}),"
             },
             predicate: () => settings.store.showInUserProfileModal
         },
