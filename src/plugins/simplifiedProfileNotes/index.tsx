@@ -82,13 +82,12 @@ function NotesSection(props: NoteHook & NotesSectionProps) {
 export default definePlugin({
     name: "SimplifiedProfileNotes",
     description: "Show the notes text box in the new simplified profile popouts",
-    authors: [{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors: [Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
+
     settings,
     patches: [
         {
