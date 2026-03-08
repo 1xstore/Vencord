@@ -240,13 +240,12 @@ const ChannelContext: NavContextMenuPatchCallback = (children, { channel }) => {
 export default definePlugin({
     name: "سحب بربرلي ؟",
     description: "Drag users with you across voice channels. Right-click users to add them to your pull list - they'll automatically follow you whenever you switch voice channels. Like having your own personal entourage.",
-    authors:[{
-        name: "rz30",
-        id: 786315593963536415n
-    }, {
+    authors:[Devs.r3r1, Devs.rz30
+    , {
         name: "l2cu",
         id: 1208352443512004648n
 }],
+
     settings,
 
     start() {
