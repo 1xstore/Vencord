@@ -265,11 +265,7 @@ export const GaryChatBarIcon: ChatBarButton = ({ isMainChat }) => {
 export default definePlugin({
     name: "RandomGary",
     description: "Adds a button to send a random Gary picture!",
-    authors:[Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors:[Devs.r3r1, Devs.rz30,],
     settings,
     start() {
         VencordNative.csp.requestAddOverride("https://api.garythe.cat", ["img-src", "connect-src"], "RandomGary");
