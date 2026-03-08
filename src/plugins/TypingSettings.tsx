@@ -249,11 +249,7 @@ function cleanup() {
 export default definePlugin({
     name: "TypingSettings",
     description: "Smooth caret movement, character animation, change color cursor typing.",
-    authors: [Devs.r3r1, Devs.rz30
-    , {
-        name: "l2cu",
-        id: 1208352443512004648n
-}],
+    authors: [Devs.r3r1, Devs.rz30,],
 
     settings,
 
