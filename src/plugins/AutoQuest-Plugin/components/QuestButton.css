@@ -1,0 +1,46 @@
+/* Target the badge backgrounds based on quest status */
+.quest-button-enrollable span[class*="iconBadge"] {
+    background-color: var(--status-danger);
+    transition: background-color 0.2s ease;
+}
+
+.quest-button-enrolled span[class*="iconBadge"] {
+    background-color: var(--status-warning);
+    transition: background-color 0.2s ease;
+}
+
+.quest-button-claimable span[class*="iconBadge"] {
+    background-color: var(--status-positive);
+    transition: background-color 0.2s ease;
+}
+
+/* Match the Icon color to the badge for a cohesive look 
+   (Optional: Remove if you want the icon to stay the default gray)
+*/
+.quest-button-enrollable svg {
+    color: var(--status-danger);
+}
+
+.quest-button-enrolled svg {
+    color: var(--status-warning);
+}
+
+.quest-button-claimable svg {
+    color: var(--status-positive);
+}
+
+/* Hide the default Discord 'New' indicator if it interferes 
+   with our custom badge logic
+*/
+.quest-button svg:has(> [mask^="url(#svg-mask-panel-button)"]) {
+    display: none;
+}
+
+/* Smooth hover effect for the whole button */
+.quest-button {
+    transition: transform 0.1s ease-in-out;
+}
+
+.quest-button:hover {
+    transform: scale(1.05);
+}
