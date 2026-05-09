@@ -87,7 +87,7 @@ export default definePlugin({
             name: "Bash",
             id: 1327483363518582784n,
         },
-        Devs.x2b
+        Devs.rz30
     ],
 
     // Using the flux system to listen to voice events
