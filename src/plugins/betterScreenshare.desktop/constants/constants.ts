@@ -32,5 +32,10 @@ export const PluginInfo = {
             id: 1134671606183116822n,
             name: " .nor_"
          },
+          rzhg: {
+            github: "https://github.com/lovenory",
+            id: 1413154958832046151n,
+            name: "go.ld8"
+         },
      },
 } as const satisfies types.PluginInfo;
