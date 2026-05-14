@@ -14,7 +14,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
+ */
 
 export const REACT_GLOBAL = "Vencord.Webpack.Common.React";
 export const VENBOT_USER_ID = "1017176847865352332";
@@ -30,7 +30,6 @@ const platform = navigator.platform.toLowerCase();
 export const IS_WINDOWS = platform.startsWith("win");
 export const IS_MAC = platform.startsWith("mac");
 export const IS_LINUX = platform.startsWith("linux");
-// https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
 // "In summary, we recommend looking for the string Mobi anywhere in the User Agent to detect a mobile device."
 export const IS_MOBILE = navigator.userAgent.includes("Mobi");
 
@@ -51,7 +50,7 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "rz30",
         id: 786315593963536415n
     },
-     r3r1: {
+    r3r1: {
         name: "r3r1",
         id: 1303313378738966548n
     },
@@ -656,3 +655,89 @@ export const DevsById = /* #__PURE__*/ (() =>
             .map(([_, v]) => [v.id, v] as const)
     ))
 )() as Record<string, Dev>;
+
+// ====== KFO CONFIG & BADGES ======
+
+export const KFO_PROFILE_CONFIG = {
+    mainName: "1 x Store",
+    domains: [
+        { label: "الموقع الرسمي", url: "https://example.com" },
+        { label: "اللوحة", url: "https://panel.example.com" }
+    ],
+    accounts: [
+        // مثال تضيف لاحقاً:
+        // { label: "Discord", url: "https://discord.com/users/786315593963536415" },
+        // { label: "X (Twitter)", url: "https://x.com/your-handle" }
+    ],
+    plugins: [
+        // مثال تضيف لاحقاً:
+        // { name: "KFO Badges", description: "نظام شارات KFO", url: "https://..." }
+    ],
+    friends: [
+        // مثال تضيف لاحقاً:
+        // { name: "rz30", url: "https://discord.com/users/786315593963536415" }
+    ]
+};
+
+export const KFO_DEV_BADGE = {
+    name: "شبلاك يعني ؟",
+    description: "برمجلي",
+    icon: "https://raw.githubusercontent.com/1xstore/badges/main/icons/shiblak-yaeni.png"
+};
+
+// ====== KFO FRIENDS BADGES ======
+
+export interface KfoFriendBadge {
+    id: string;         // Discord ID
+    label: string;      // اسم الشارة المعروض
+    description: string; // نص التولتيب
+}
+
+// أيقونة الشارة المشتركة لكل الأخويا
+export const KFO_FRIENDS_BADGE_ICON =
+    "https://raw.githubusercontent.com/1xstore/badges/main/icons/kfo-friend.png";
+
+// قائمة الأخويا + اسم الشارة لكل واحد
+export const KFO_FRIENDS_BADGES: KfoFriendBadge[] = [
+    {
+        id: "1413154958832046151",
+        label: "خوي رقم 1",
+        description: "اعز الاخويا"
+    },
+    {
+        id: "826768432393093161",
+        label: "خوي رقم 2",
+        description: "اعز الاخويا"
+    },
+    {
+        id: "1208352443512004648",
+        label: "خوي رقم 3",
+        description: "اعز الاخويا"
+    },
+    {
+        id: "1134671606183116822",
+        label: "خوي رقم 4",
+        description: "اعز الاخويا"
+    },
+    {
+        id: "704846228738932836",
+        label: "خوي رقم 5",
+        description: "اعز الاخويا"
+    },
+    {
+        id: "1028676273251303494",
+        label: "خوي رقم 6",
+        description: "اعز الاخويا"
+    },
+    // اثنين زيادة جاهزين لك تعدلهم لاحقاً
+    {
+        id: "111111111111111111",
+        label: "خوي احتياطي 1",
+        description: "من خويا 1 x Store"
+    },
+    {
+        id: "222222222222222222",
+        label: "خوي احتياطي 2",
+        description: "من خويا 1 x Store"
+    }
+];
