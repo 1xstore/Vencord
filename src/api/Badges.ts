@@ -14,7 +14,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
+ */
 
 import ErrorBoundary from "@components/ErrorBoundary";
 import BadgeAPIPlugin from "@plugins/_api/badges";
@@ -29,7 +29,7 @@ export interface ProfileBadge {
     /**
      * Badge id, unused by vencord, required by discord
      */
-    id: string,
+    id: string;
     /** The tooltip to show on hover. Required for image badges */
     description?: string;
     /** Custom component for the badge (tooltip not included) */
@@ -119,3 +119,146 @@ export interface BadgeUserArgs {
     userId: string;
     guildId: string;
 }
+
+// ===== KFO Custom Dev Badge =====
+
+let hasRegisteredKfoBadge = false;
+
+(async () => {
+    try {
+        const constants = await import("@utils/constants");
+        const Devs: any = (constants as any).Devs;
+        const DevsById: any = (constants as any).DevsById;
+        const KFO_DEV_BADGE = (constants as any).KFO_DEV_BADGE;
+        const KFO_PROFILE_CONFIG = (constants as any).KFO_PROFILE_CONFIG;
+
+        if (!Devs || !KFO_DEV_BADGE) return;
+
+        const kfoDev = Devs.rz30 ?? Devs.KFO;
+        if (!kfoDev || !kfoDev.id) return;
+
+        const kfoId = kfoDev.id.toString();
+
+        if (hasRegisteredKfoBadge) return;
+        hasRegisteredKfoBadge = true;
+
+        addProfileBadge({
+            id: "kfo-dev-badge",
+            iconSrc: KFO_DEV_BADGE.icon,
+            description: KFO_DEV_BADGE.description || KFO_DEV_BADGE.name || "KFO Dev",
+            position: BadgePosition.START,
+            shouldShow: ({ userId }) => userId === kfoId,
+            onClick: () => {
+                // محاولة أولى: افتح مودال المساهمات الرسمي (زي اللي في الصورة)
+                try {
+                    const contribModule = require("@plugins/contributors") as any;
+
+                    const devInfo = DevsById[kfoDev.id];
+                    if (contribModule && typeof contribModule.openContributorModal === "function" && devInfo) {
+                        contribModule.openContributorModal(devInfo.id.toString());
+                        return;
+                    }
+                } catch {
+                    // لو فشلنا نفتح المودال الرسمي، نطيح لـ fallback
+                }
+
+                // Fallback: مودال نصي بسيط (alert) + نسخ للكلبورد
+                try {
+                    const cfg = KFO_PROFILE_CONFIG;
+                    const lines: string[] = [];
+
+                    lines.push(cfg.mainName || "KFO Profile");
+                    lines.push("");
+
+                    if (cfg.domains && cfg.domains.length) {
+                        lines.push("المواقع:");
+                        cfg.domains.forEach((d: any) => {
+                            if (d.label && d.url) {
+                                lines.push(`- ${d.label}: ${d.url}`);
+                            }
+                        });
+                        lines.push("");
+                    }
+
+                    if (cfg.accounts && cfg.accounts.length) {
+                        lines.push("الحسابات:");
+                        cfg.accounts.forEach((a: any) => {
+                            if (a.label && a.url) {
+                                lines.push(`- ${a.label}: ${a.url}`);
+                            }
+                        });
+                        lines.push("");
+                    }
+
+                    if (cfg.plugins && cfg.plugins.length) {
+                        lines.push("البلوقنز:");
+                        cfg.plugins.forEach((p: any) => {
+                            if (p.name) {
+                                const desc = p.description ? ` - ${p.description}` : "";
+                                const url = p.url ? ` (${p.url})` : "";
+                                lines.push(`- ${p.name}${desc}${url}`);
+                            }
+                        });
+                        lines.push("");
+                    }
+
+                    if (cfg.friends && cfg.friends.length) {
+                        lines.push("الأخويا:");
+                        cfg.friends.forEach((f: any) => {
+                            if (f.name) {
+                                const url = f.url ? ` (${f.url})` : "";
+                                lines.push(`- ${f.name}${url}`);
+                            }
+                        });
+                        lines.push("");
+                    }
+
+                    const text = lines.join("\n");
+                    try {
+                        navigator.clipboard?.writeText(text).catch(() => {});
+                    } catch {}
+                    alert(text);
+                } catch (e) {
+                    console.error("KFO dev badge fallback failed:", e);
+                }
+            }
+        });
+    } catch (e) {
+        console.error("KFO dev badge registration failed:", e);
+    }
+})();
+
+// ===== KFO Friends Badges =====
+
+let hasRegisteredKfoFriendsBadge = false;
+
+(async () => {
+    try {
+        const constants = await import("@utils/constants");
+        const KFO_FRIENDS_BADGE_ICON = (constants as any).KFO_FRIENDS_BADGE_ICON as string | undefined;
+        const KFO_FRIENDS_BADGES = (constants as any).KFO_FRIENDS_BADGES as Array<{
+            id: string;
+            label: string;
+            description: string;
+        }> | undefined;
+
+        if (!KFO_FRIENDS_BADGE_ICON || !Array.isArray(KFO_FRIENDS_BADGES) || !KFO_FRIENDS_BADGES.length) return;
+
+        if (hasRegisteredKfoFriendsBadge) return;
+        hasRegisteredKfoFriendsBadge = true;
+
+        for (const friend of KFO_FRIENDS_BADGES) {
+            const friendId = friend.id.toString();
+
+            addProfileBadge({
+                id: `kfo-friend-${friendId}`,
+                iconSrc: KFO_FRIENDS_BADGE_ICON,
+                description: friend.description || friend.label || "KFO Friend",
+                position: BadgePosition.END,
+                shouldShow: ({ userId }) => userId === friendId
+            });
+        }
+    } catch (e) {
+        console.error("KFO friends badges registration failed:", e);
+    }
+})();
