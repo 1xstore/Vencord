@@ -1,4 +1,4 @@
-# Integration Guide: Purify Studio Audio + Discord Voice Module
+# Integration Guide: rz or 10 Studio Audio + Discord Voice Module
 
 ## Overview
 This guide explains how the Vencord plugin and discord_voice module modifications work together to provide professional studio-quality audio.
