@@ -54,6 +54,31 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "r3r1",
         id: 1303313378738966548n
     },
+    HVN: {
+        name: "l2cu",
+        id: 1208352443512004648n,
+        badge: false
+    },
+    eng: {
+        name: "_wpw",
+        id: 940650364082995200n,
+        badge: false
+    },
+    n: {
+        name: ".nor_",
+        id: 1134671606183116822n,
+        badge: false
+    },
+    g: {
+        name: "go.ld8",
+        id: 1413154958832046151n,
+        badge: false
+    },
+    nn: {
+        name: ".nor24.",
+        id: 1429545167899070666n,
+        badge: false
+    },
     Ven: {
         name: "V",
         id: 343383572805058560n
@@ -733,11 +758,11 @@ export const KFO_FRIENDS_BADGES: KfoFriendBadge[] = [
     {
         id: "111111111111111111",
         label: "خوي احتياطي 1",
-        description: "من خويا 1 x Store"
+        description: "اعز الاخويا"
     },
     {
         id: "222222222222222222",
         label: "خوي احتياطي 2",
-        description: "من خويا 1 x Store"
+        description: "اعز الاخويا"
     }
 ];
