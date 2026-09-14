@@ -5,7 +5,7 @@
  */
 
 import { Settings } from "@api/Settings";
-import { getActiveLanguage, t as pluginT } from "../nightcordplugins/autoTranslateNightcord";
+import { getActiveLanguage, t as pluginT } from "../plugins/autoTranslateNightcord";
 
 export type Language = "en" | "fr" | "es" | "ru" | "zh" | "ar";
 
