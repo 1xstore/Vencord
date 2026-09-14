@@ -4,7 +4,7 @@
  */
 
 import { Settings } from "@api/Settings";
-import { getActiveLanguage, t as tATC } from "../nightcordplugins/autoTranslateNightcord";
+import { getActiveLanguage, t as tATC } from "../plugins/autoTranslateNightcord";
 
 type LangMap = { fr?: string; es?: string; ru?: string; zh?: string };
 
