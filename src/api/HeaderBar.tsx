@@ -539,7 +539,7 @@ function CompactHeaderBarToggle() {
                 icon={GearIcon}
                 tooltip="Nightcord Settings"
                 onClick={() => {
-                    import("@nightcordplugins/compactMode/NightcordModal").then(m => m.openNightcordModal());
+                    import("@plugins/compactMode/NightcordModal").then(m => m.openNightcordModal());
                 }}
             />
         </div>
